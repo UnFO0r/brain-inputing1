@@ -1,0 +1,135 @@
+#include <stdio.h>
+
+//int num2 = 20;//全局变量——定义在代码块{}外的变量，作用整个工程
+
+//int num3 = 43;
+//
+//int main()
+//{
+//	//printf("asd%ddje\n", num3);
+//
+//	//extern int gal;//extern——声明外部符号
+//	//printf("%dx\n", gal);
+//
+//	//extern char ass;
+//	//printf("I like girl's %c very much.\n", ass);
+//
+//	//printf("I like girl's b very much.\n");
+//
+//	////计算2个数的乘积
+//	//int mul1 = 2;
+//	//int mul2 = 6;
+//	//int times = 0;
+//	//scanf("%d %d", &mul1, &mul2);//输入函数scanf；&——取地址符号，使用数据时计算机从内存找到该数据
+//	//times = mul1 * mul2;
+//	//printf("times = %d\n", times);
+//	//
+//	//return 0;
+//
+//	//{int num2 = 25;//全局和局部建议不要相同，相同时局部变量优先生效
+//	//}
+//	//printf("%d\n", num2);
+//	//int num1 = 10;//局部变量——定义在之内的变量
+//
+//	/*char ch = 'A';*/ //向内存空间申请一个空间来存放这个数据
+//	
+//	/*	%c——字符格式，\n换行，逗号后跟要打印的字符串，双引号不能覆盖要打印的字符串
+//		%s——打印字符串
+//		short int - 短整型 —— % d
+//		long - 长整型 ——%d
+//		double - 双精度浮点型 ——%lf
+//		float - 单精度浮点型  ——%f
+//		%p ——以地址的形式打印
+//		%x ——打印16进制数字	*/
+//		
+//		/*printf("%c\n",ch);
+//		int age = 20;
+//		printf("%d\n", age);
+//		char op = 'g';
+//		printf("%c\n", op);*/
+//		
+//		/*float ass = 100.3f;
+//		printf("%f\n", ass);*/
+//		
+//		//printf("%d\n", sizeof(char));		//1
+//		//printf("%d\n", sizeof(short));		//2
+//		//printf("%d\n", sizeof(int));		//4
+//		//printf("%d\n", sizeof(long));		//4或8
+//		//printf("%d\n", sizeof(long long));	//8
+//		//printf("%d\n", sizeof(float));		//4
+//		//printf("%d\n", sizeof(double));		//8
+//		/*计算机单位
+//			bit - 比特位		计算机中最小单位  0 1
+//			byte - 字节			8个比特位的大小
+//			kb......
+//			*/
+//			/*char cha = '\'';//“\”——转义字符，“'”在某些情况引起歧义，用转义字符表示得当
+//			printf("%d\n", cha);*/
+//	
+//	//const 常变量，恒定的
+//	/*const int num = 4;
+//	printf("%d\n", num);
+//	num = 21;
+//	printf("%d\n", num);*/
+//	//3;//字面常量
+//
+//	/*int n = 10;//n是常变量，只是具有常属性，不是常量
+//	int arr[n] = { 0 };*/
+//
+//	return 0;
+//}
+
+//#define MAX 17//define定义的宏常量
+//
+//int main()
+//{
+//	int arr[MAX] = { 0 };
+//	printf("%d\n", MAX);
+//
+//	return 0;
+//}
+
+//枚举关键字，可以列举出来
+//enum Sex
+//{
+//	MALE,
+//	FEMALE,
+//	SECRET,
+//};
+//
+//int main()
+//{
+//	printf("%d\n", MALE);//0
+//	printf("%d\n", FEMALE);//1
+//	printf("%d\n", SECRET);//2
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[] = "abcd";//字符串的末尾有'\0'的转义字符，相当于0，表示字符串的结束标志
+//	char arr2[] = { 'a','b','c','d' ,'\0'};
+//	printf("%s\n", arr1);
+//	printf("%s\n", arr2);
+//	printf("%d\n", strlen(arr1));//strlen - string length计算字符串长度
+//	printf("%d\n", strlen(arr2));//字符串转义字符'\0'不计入字符串长度
+//	return 0;
+//}
+#include <string.h>
+
+//int main()
+//{
+//	printf("%d\n",strlen("c:\\teacher\\64\\teacher.c"));
+//	//\t - 水平制表符，tab
+//	printf("%c\n", '\64');//  \64代表八进制的64表示的十进制数的ASCII码值对应的字符
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int d=21;
+//	printf("%d\n",(9*d-33)/3);
+//
+//	return 0;
+//}
