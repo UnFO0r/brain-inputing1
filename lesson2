@@ -1,0 +1,82 @@
+int main()
+{
+	int input = 0;
+	printf("选择你想的异世界：\n1、中世纪欧洲风格；2、古代国风玄幻；3、现代玄幻；\n");
+	scanf("%d", &input);
+	if (input == 1)
+		printf("你会强制有事出门，后被卡车撞然后魂穿\n");
+	else if (input == 2)
+		printf("你将会立刻得不治之症然后体穿\n");
+	else if (input == 3)
+		printf("你将会穿回你小学四年级并得到奇遇，改变自己从那时做起\n");
+
+	return 0;
+}
+
+int Add(int x, int y)
+{
+	int z = x + y;
+	return z;
+}
+int main()
+{
+	int num = 0;
+	int num1 = 0;
+	int num2 = 0;
+	
+	do {
+		num2++;
+		num1 = num2 + 1;
+		num = Add(num1, num2);
+	}
+	while (num1 < 1000);
+		printf("%d", num);
+	
+	return 0;
+}
+
+int Fib(int n)//递归算法计算斐波那契数列，多分支递归，会造成栈溢出
+{
+	if(n==1||n==2)
+	{
+		return 1;
+	}
+	else
+	{
+		return Fib(n - 1) + Fib(n - 2);
+	}
+	return 0;
+}
+int main()
+{
+	int n = 0;
+	scanf("%d", &n);
+	int ret = Fib(n);
+	printf("%d\n", ret);
+
+	return 0;
+}
+
+int main()//非递归算法，效率高，避免重复计算的时间与空间
+{
+	printf("%d\n",' ');
+	int n = 0;
+	printf("Please input a integer:");
+	scanf("%d", &n);
+	if (n == 1 || n == 2)
+	{
+		return 1;
+	}
+	else {
+		int f1 = 1;
+		int f2 = 1;
+		int f3 = -1;
+		for (int i = 3; i<=n; i++) {
+			f3 = f1 + f2;
+			f1 = f2;
+			f2 = f3;
+		}
+		printf("The number's Fib is %d\n", f3);
+	}
+	return 0;
+}
