@@ -1,0 +1,68 @@
+//编写猜数字游戏的程序
+//1、电脑生成一个随机数字，你猜大了，会说大了；猜小了会说小了。
+//2、完成一次后有再来一次的选项
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void menu()//菜单栏
+{
+	printf("                    \n");
+	printf("  1.play   0.exit   \n");
+	printf("                    \n");
+}
+
+void game()
+{
+	//生成随机数
+	int ret = 0;
+	int guess = 0;
+	//用时间戳来设置随机数的起始点
+	//time函数：time_t - time_t*timer
+	ret = rand()%100 + 1;
+	while (1)
+	{
+		printf("请猜：");
+		scanf("%d", &guess);
+		if (guess > ret)
+		{
+			printf("大于目标\n");
+		}
+		else if (guess < ret)
+		{
+			printf("小于目标\n");
+		}
+		else
+		{
+			printf("对了\n");
+			break;
+		}
+	}
+}
+
+int main()
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));
+	do
+	{
+		menu();
+		printf("请选择：");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			printf("退出游戏\n");
+			break;
+		default:
+			printf("无此项选择\n");
+			break;
+		}
+	} while (input);
+
+	return 0;
+}
